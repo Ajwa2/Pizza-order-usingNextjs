@@ -22,7 +22,9 @@ export default function Navbar() {
                 <Link href='/About' className=" hover:text-primary active:text-primary navAbout">Who we are</Link>
             </nav>
             <div className="w-1/6 float-left text-white flex justify-center">
-                <button className=" bg-primary px-4 pb-1 font-semibold navAbout">Register</button>
+                <Link href={'/Register'}>
+                    <button className=" bg-primary px-4 pb-1 font-semibold navAbout">Register</button>
+                </Link>
                 {/* <MenuSharp className="text-black text-3xl block md:hidden"/> */}
             </div>
         </div>
