@@ -23,7 +23,7 @@ export default function Navbar() {
             </nav>
             <div className="w-1/6 float-left text-white flex justify-center">
                 <button className=" bg-primary px-4 pb-1 font-semibold navAbout">Register</button>
-                <MenuSharp className="text-black text-3xl block md:hidden"/>
+                {/* <MenuSharp className="text-black text-3xl block md:hidden"/> */}
             </div>
         </div>
     )
