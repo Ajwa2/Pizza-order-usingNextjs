@@ -1,21 +1,22 @@
 "use client"
 import { useState } from 'react'
 import Image from 'next/image'
-import heroImg from '../assets/images/img-hero.png'
+import heroImg from '../assets/images/home.png'
+import hero from '../assets/Image1.png'
 
 export default function Hero() {
     const [text, setText] = useState('')
     return (
         <div className="flex  px-aut0  h-screen bg-gradient-to-b from-orange-100 via-orange-300 to-orange-100">
-            <div className='w-1/2 flex flex-col align-middle pl-7 pt-10'>
-                <h1 className="text-8xl pl-2 pb-4 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent font-bold">
+            <div className='w-1/2 flex flex-col align-middle pl-7 pt-10 rightSide'>
+                <h1 className="text-8xl heroTitle pl-2 pb-4 bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent font-bold">
                 Order us
                 </h1>
-                <p className='text-black'>In publishing and graphic design, lorem ipsum is a placeholder 
+                <p className='text-black heroText'>In publishing and graphic design, lorem ipsum is a placeholder 
                     text commonly used to demonstrate the visual form of a document the visual form of a 
                     document or a typeface without.
                 </p>
-                <div className='flex justify-center align-middle gap-3 bg-white p-2 rounded-3xl mt-5'>
+                <div className='flex justify-center align-middle gap-3 bg-white p-2 rounded-3xl mt-5 searchBar'>
                     <input
                         type="text"
                         onChange={(e) => setText(e.target.value)}
@@ -30,11 +31,9 @@ export default function Hero() {
                     </div>
                 </div>
             </div>
-            <div className='w-1/2 flex justify-end'>
-                <Image
-                src={heroImg}
-                width={500}
-                />
+            <div className='w-1/2 flex justify-end relative overflow-hidden heroImage'>
+                <Image src={heroImg} alt='background' className='w-full h-auto' />
+                <Image src={hero} alt='foreground' className='absolute left-36 top-7 w-full h-full z-10 overflow-x-hidden'/>
             </div>
         </div>
     )

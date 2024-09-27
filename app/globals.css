@@ -23,3 +23,36 @@ body {
 .scrollbar-hide::-webkit-scrollbar {
     display: none; 
 }
+@media (max-width: 768px){
+    .leftSide {
+        display: none;
+    }
+    .rightSide{
+        width: 100%;
+    }
+    .footerNav{
+        flex-direction: column;
+    }
+    .footerPolicy{
+        flex-direction: column;
+        align-items: center;
+    }
+    .feedbackWidth{
+        @apply w-48
+    }
+    .heroImage{
+        display: none;
+    }
+    .searchBar{
+        @apply mx-24
+    }
+    .heroTitle{
+        @apply mx-5
+    }
+    .heroText{
+        @apply mx-10 text-2xl mt-5
+    }
+    .navAbout{
+        display: none;
+    }
+}

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import profiles from '../assets/pp.png'
 import battery from '../assets/battery.png'
+import mask from '../assets/Mask group.png'
 
 const cards =[
     {
@@ -55,7 +56,7 @@ export default function TopRestaurants() {
                         </div>
         
                         <div className="bg-topColor flex gap-2 w-3/5 p-2 rounded-lg">
-                            <Image src={battery} alt="orders" width={30} quality={100} className="bg-orange-200 w-12 h-12 rounded-3xl "/>
+                            <Image src={mask} alt="orders" width={10} quality={100} className="bg-orange-200 w-12 h-12 rounded-3xl "/>
                             <div className="">
                                 <p style={{fontSize:9}}>Number Of Order</p>
                                 <p className="text-primary font-bold text-2xl">{card.numberOfOrders}</p>

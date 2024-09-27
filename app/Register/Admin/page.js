@@ -1,19 +1,17 @@
 "use client"
 import Image from "next/image";
-import logo from '../assets/images/pizza-logo.png'
+import logo from '../../assets/images/pizza-logo.png'
 import { useState } from "react";
-import Link from "next/link";
 import { TextField } from "@mui/material";
 
-export default function SignUp(){
+export default function AddAdmin(){
     const [adminName,setAdminName] = useState('')
     const [emailAddress, setEmailAddress] = useState('')
     const [password, setPassword] = useState('')
-    const [confirmPassword, setConfirmPassword] = useState('')
-    const [location, setLocation] = useState('')
     const [phoneNumber, setPhoneNumber] = useState('')
-    const [restaurantName, setRestaurantName] = useState('')
+    const [confirmPassword, setConfirmPassword] = useState('')
 
+    
     return(
         <div className="flex">
             <div className="bg-primary w-1/2 flex justify-center items-center leftSide">
@@ -25,6 +23,7 @@ export default function SignUp(){
                         <Image src={logo} alt="Pizza Logo" className="w-12 h-12" />
                         <h2 className="text-2xl font-bold mb-6 text-center text-secondary">Pizza</h2>
                     </div>
+                    <p className="pt-5 pb-2 border-b-2 font-semibold text-2xl">Add Admin</p>
 
                     <form encType="multipart/form-data">
                         <div className="mb-4">
@@ -35,7 +34,7 @@ export default function SignUp(){
                                 color="warning"
                                 value={adminName}
                                 onChange={(e) => setAdminName(e.target.value)}
-                                className="shadow w-full text-gray-700"
+                                className="shadow w-full text-gray-700 mt-5"
                             />
                         </div>
 
@@ -50,7 +49,23 @@ export default function SignUp(){
                                 className="shadow w-full text-gray-700"
                             />
                         </div>
-        
+
+                        <div className="mb-4">
+                            <TextField
+                                id="outlined-number"
+                                label="Phone Number"
+                                type="number"
+                                color="warning"
+                                slotProps={{
+                                    inputLabel: {
+                                    shrink: true,
+                                    },}}
+                                value={phoneNumber}
+                                onChange={(e) => setPhoneNumber(e.target.value)}
+                                className="shadow w-full text-gray-700"
+                            />
+                        </div>
+
                         <div className="mb-4">
                             <TextField
                                 id="outlined-password-input"
@@ -76,69 +91,14 @@ export default function SignUp(){
                                 className="shadow w-full text-gray-700"
                             />
                         </div>
-
-                        <div className="mb-4">
-                            <TextField
-                                id="outlined-number"
-                                label="Phone Number"
-                                type="number"
-                                color="warning"
-                                slotProps={{
-                                    inputLabel: {
-                                    shrink: true,
-                                    },}}
-                                value={phoneNumber}
-                                onChange={(e) => setPhoneNumber(e.target.value)}
-                                className="shadow w-full text-gray-700"
-                            />
-                        </div>
-
-                        <div className="mb-4">
-                            <TextField
-                                id="filled-required"
-                                label="Restaurant Name"
-                                type="text"
-                                color="warning"
-                                value={restaurantName}
-                                onChange={(e) => setRestaurantName(e.target.value)}
-                                className="shadow w-full text-gray-700"
-                            />
-                        </div>
-
-                        <div className="mb-4">
-                            <TextField
-                                id="filled-required"
-                                label="Location"
-                                type="text"
-                                color="warning"
-                                value={location}
-                                onChange={(e) => setLocation(e.target.value)}
-                                className="shadow w-full text-gray-700"
-                            />
-                        </div>
                     </form>
-                    <div className="text-primary flex justify-center py-2 border w-full border-gray-500 rounded">
-                        <h3>Upload Logo</h3>
-                    </div>
-                    <div className="flex gap-2 items-center my-4">
-                        <input 
-                            type="checkbox" 
-                            // checked={isChecked}
-                            // onChange={handleCheckboxChange} 
-                            className="mr-2 h-5 w-5 text-primary border-gray-300 rounded focus:ring-primary"
-                        />
-                        <p>I accept the Terms and Conditions</p>
-                    </div>
+
                     <div className="bg-primary font-semibold text-white rounded text-center py-2">
-                        <h3>SIGN UP</h3>
-                    </div>
-                    <div className="flex gap-1 justify-center pt-3">
-                        <p>Already have an account</p>
-                        <Link href={'/Register/Login'} className="text-primary">Login</Link>
+                        <h3>CONTINUE</h3>
                     </div>
                 </div>
             </div>
+
         </div>
-        
     )
 }

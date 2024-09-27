@@ -1,10 +1,10 @@
 "use client"
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import img1 from '../assets/images/img-1.jpeg'
-import img2 from '../assets/images/img-2.jpeg'
-import img3 from '../assets/images/img-3.jpeg'
-import heroImg from '../assets/images/img-hero.png'
+import img1 from '../assets/Image7.png'
+import img2 from '../assets/Image8.png'
+import img3 from '../assets/Image9.png'
+import heroImg from '../assets/Image8.png'
 
 
 const cards = [
@@ -65,7 +65,7 @@ const Slider = () => {
                                     <div className="mt-2">{card.content}</div>
                                     <button className='btn bg-primary text-white font-semibold py-3 px-10 mt-5 rounded-lg'>Order Now</button>
                                 </div>
-                                <Image src={heroImg} width={200} alt="image" className="w-full h-52 object-cover rounded-lg" />
+                                <Image src={heroImg}  alt="image" className="w-full h-64" />
                             </div>
                         </div>
                     ))}
